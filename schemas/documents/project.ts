@@ -1,4 +1,4 @@
-import {defineArrayMember, defineField, defineType} from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'project',
@@ -13,7 +13,6 @@ export default defineType({
     defineField({
       name: 'title',
       title: 'Project Title',
-
       type: 'string',
       validation: (rule) => rule.required(),
     }),
@@ -61,8 +60,8 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          {title: 'Work in progress', value: 'wip'},
-          {title: 'Finished', value: 'finished'},
+          { title: 'Work in progress', value: 'wip' },
+          { title: 'Finished', value: 'finished' },
         ],
         layout: 'radio',
         direction: 'horizontal',
@@ -72,7 +71,7 @@ export default defineType({
       name: 'typologies',
       title: 'Typologies',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'typology'}]}],
+      of: [{ type: 'reference', to: [{ type: 'typology' }] }],
     }),
     defineField({
       name: 'images',
@@ -100,4 +99,4 @@ export default defineType({
       },
     }),
   ],
-})
+});

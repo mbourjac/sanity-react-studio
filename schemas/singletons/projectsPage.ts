@@ -1,4 +1,4 @@
-import {defineArrayMember, defineField, defineType} from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'projectsPage',
@@ -56,4 +56,4 @@ export default defineType({
       validation: (rule) => rule.max(155).required(),
     }),
   ],
-})
+});

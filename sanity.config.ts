@@ -1,11 +1,11 @@
-import {defineConfig, isDev} from 'sanity'
-import {visionTool} from '@sanity/vision'
-import {deskTool} from 'sanity/desk'
-import {schemaTypes} from './schemas'
-import {getStartedPlugin} from './plugins/sanity-plugin-tutorial'
-import {customStructure} from './desk/desk.structure'
+import { defineConfig, isDev } from 'sanity';
+import { visionTool } from '@sanity/vision';
+import { deskTool } from 'sanity/desk';
+import { schemaTypes } from './schemas';
+import { getStartedPlugin } from './plugins/sanity-plugin-tutorial';
+import { customStructure } from './desk/desk.structure';
 
-const devOnlyPlugins = [getStartedPlugin()]
+const devOnlyPlugins = [getStartedPlugin()];
 
 export default defineConfig({
   name: 'default',
@@ -22,4 +22,4 @@ export default defineConfig({
     visionTool(),
     ...(isDev ? devOnlyPlugins : []),
   ],
-})
+});

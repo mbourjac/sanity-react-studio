@@ -1,5 +1,12 @@
-import {StructureBuilder} from 'sanity/desk'
-import {ControlsIcon, CogIcon, MenuIcon, EnvelopeIcon, HomeIcon, DocumentsIcon} from '@sanity/icons'
+import { StructureBuilder } from 'sanity/desk';
+import {
+  ControlsIcon,
+  CogIcon,
+  MenuIcon,
+  EnvelopeIcon,
+  HomeIcon,
+  DocumentsIcon,
+} from '@sanity/icons';
 
 export const customStructure = (S: StructureBuilder) => {
   return S.list()
@@ -15,7 +22,9 @@ export const customStructure = (S: StructureBuilder) => {
               S.listItem()
                 .title('Metadata')
                 .icon(CogIcon)
-                .child(S.document().schemaType('metadata').documentId('metadata')),
+                .child(
+                  S.document().schemaType('metadata').documentId('metadata')
+                ),
               S.listItem()
                 .title('Header')
                 .icon(MenuIcon)
@@ -24,7 +33,7 @@ export const customStructure = (S: StructureBuilder) => {
                 .title('Footer')
                 .icon(EnvelopeIcon)
                 .child(S.document().schemaType('footer').documentId('footer')),
-            ]),
+            ])
         ),
       S.divider(),
       S.listItem()
@@ -41,21 +50,34 @@ export const customStructure = (S: StructureBuilder) => {
               S.listItem()
                 .title('Projects Page')
                 .icon(CogIcon)
-                .child(S.document().schemaType('projectsPage').documentId('projectsPage')),
+                .child(
+                  S.document()
+                    .schemaType('projectsPage')
+                    .documentId('projectsPage')
+                ),
               S.divider(),
               S.listItem()
                 .title('All Projects')
                 .icon(DocumentsIcon)
                 .schemaType('project')
-                .child(S.documentTypeList('project').title('All Projects').showIcons()),
-            ]),
+                .child(
+                  S.documentTypeList('project')
+                    .title('All Projects')
+                    .showIcons()
+                ),
+            ])
         ),
       S.divider(),
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !['metadata', 'header', 'footer', 'home', 'project', 'projectsPage'].includes(
-            listItem.getId() as string,
-          ),
+          ![
+            'metadata',
+            'header',
+            'footer',
+            'home',
+            'project',
+            'projectsPage',
+          ].includes(listItem.getId() as string)
       ),
-    ])
-}
+    ]);
+};
