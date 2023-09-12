@@ -2,8 +2,8 @@ import { TagIcon } from '@sanity/icons';
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'typology',
-  title: 'Typologies',
+  name: 'projectTypology',
+  title: 'Project Typologies',
   type: 'document',
   icon: TagIcon,
   fields: [

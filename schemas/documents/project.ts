@@ -71,7 +71,7 @@ export default defineType({
       name: 'typologies',
       title: 'Typologies',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'typology' }] }],
+      of: [{ type: 'reference', to: [{ type: 'projectTypology' }] }],
     }),
     defineField({
       name: 'images',

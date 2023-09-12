@@ -1,5 +1,5 @@
 import project from './documents/project';
-import typology from './documents/project-typology';
+import projectTypology from './documents/project-typology';
 import metadataObject from './objects/metadata';
 import footer from './singletons/footer';
 import header from './singletons/header';
@@ -15,5 +15,5 @@ export const schemaTypes = [
   project,
   metadataObject,
   projectsPage,
-  typology,
+  projectTypology,
 ];
