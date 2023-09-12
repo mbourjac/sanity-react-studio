@@ -12,8 +12,8 @@ export default defineType({
     }),
     defineField({
       name: 'title',
-      description: 'This field is the title of your project.',
-      title: 'Title',
+      title: 'Project Title',
+
       type: 'string',
       validation: (rule) => rule.required(),
     }),
@@ -54,6 +54,50 @@ export default defineType({
           styles: [],
         }),
       ],
+    }),
+    defineField({
+      name: 'status',
+      title: 'Status',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Work in progress', value: 'wip'},
+          {title: 'Finished', value: 'finished'},
+        ],
+        layout: 'radio',
+        direction: 'horizontal',
+      },
+    }),
+    defineField({
+      name: 'typologies',
+      title: 'Typologies',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'typology'}]}],
+    }),
+    defineField({
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          name: 'image',
+          title: 'Image',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            defineField({
+              name: 'alt',
+              type: 'string',
+              title: 'Alt text',
+            }),
+          ],
+        }),
+      ],
+      options: {
+        layout: 'grid',
+      },
     }),
   ],
 })
