@@ -5,7 +5,7 @@ import footer from './singletons/footer';
 import header from './singletons/header';
 import home from './singletons/home';
 import metadata from './singletons/metadata';
-import projectsPage from './singletons/projectsPage';
+import projectsPage from './singletons/projects-page';
 
 export const schemaTypes = [
   home,
