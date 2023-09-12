@@ -1,5 +1,5 @@
 import project from './documents/project';
-import typology from './documents/typology';
+import typology from './documents/project-typology';
 import metadataObject from './objects/metadata';
 import footer from './singletons/footer';
 import header from './singletons/header';
