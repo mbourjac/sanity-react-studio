@@ -4,7 +4,7 @@ export default defineType({
   name: 'metadataObject',
   title: 'Metadata',
   description:
-    'The metadata fields provided will take precedence over the globally defined ones for this page.',
+    'The metadata fields provided for this page will take precedence over the globally defined ones.',
   type: 'object',
   options: {
     collapsible: true,
